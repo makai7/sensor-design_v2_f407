@@ -22,6 +22,7 @@
 #include "stm32f4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "hcsr04.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -228,5 +229,17 @@ void DMA2_Stream1_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+
+/**
+  * @brief  Input capture callback for TIM3 (HC-SR04 ultrasonic sensor)
+  * @param  htim: TIM handle
+  * @retval None
+  */
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim->Instance == TIM3) {
+        HCSR04_CaptureCallback();
+    }
+}
 
 /* USER CODE END 1 */

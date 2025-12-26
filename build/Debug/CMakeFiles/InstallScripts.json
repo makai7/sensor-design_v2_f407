@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ian_arch/coding/sensor-design_v2_f407-1/build/Debug/cmake_install.cmake",
+		"/home/ian_arch/coding/sensor-design_v2_f407-1/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

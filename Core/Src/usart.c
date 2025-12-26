@@ -21,7 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-
+#include <stdio.h>
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -110,5 +110,29 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
+
+/**
+ * @brief  Retarget printf to USART1
+ * @param  ch: Character to send
+ * @param  f: File pointer (not used)
+ * @retval Character sent
+ */
+int fputc(int ch, FILE *f)
+{
+    HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+    return ch;
+}
+
+/**
+ * @brief  Retarget scanf to USART1 (optional)
+ * @param  f: File pointer (not used)
+ * @retval Character received
+ */
+int fgetc(FILE *f)
+{
+    uint8_t ch;
+    HAL_UART_Receive(&huart1, &ch, 1, HAL_MAX_DELAY);
+    return ch;
+}
 
 /* USER CODE END 1 */

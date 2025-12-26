@@ -27,7 +27,12 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
+#include "servo_driver.h"
+#include "hcsr04.h"
+#include "ov2640.h"
+#include "test_suite.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,7 +53,13 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+/* Image buffer for OV2640 (aligned for DMA) */
+#define IMAGE_BUFFER_SIZE   (10 * 1024)  // 10KB buffer for JPEG
+__attribute__((aligned(4))) uint8_t imageBuffer[IMAGE_BUFFER_SIZE];
 
+/* Scan parameters */
+float currentPanAngle = 0.0f;    // Current horizontal angle
+float currentTiltAngle = 90.0f;  // Current vertical angle (fixed)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -99,6 +110,40 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  /* ========================================
+   * Application Initialization
+   * ======================================== */
+
+  printf("\r\n");
+  printf("========================================\r\n");
+  printf(" STM32F407 Smart Gimbal System\r\n");
+  printf(" Firmware Version: 1.0\r\n");
+  printf("========================================\r\n\r\n");
+
+  /* Run Unit Tests First */
+  Run_All_Tests();
+
+  /* 1. Initialize Servo Motors */
+  printf("[INIT] Initializing servos...\r\n");
+  Servo_Init();
+  printf("[OK] Servos initialized\r\n");
+
+  /* 2. Initialize HC-SR04 Ultrasonic Sensor */
+  printf("[INIT] Initializing ultrasonic sensor...\r\n");
+  HCSR04_Init();
+  printf("[OK] Ultrasonic sensor initialized\r\n");
+
+  /* 3. Initialize OV2640 Camera */
+  printf("[INIT] Initializing OV2640 camera...\r\n");
+  OV2640_Status_t camStatus = OV2640_Init(OV2640_FORMAT_JPEG_QQVGA);
+  if (camStatus == OV2640_OK) {
+      printf("[OK] OV2640 initialized (JPEG QQVGA 160x120)\r\n");
+  } else {
+      printf("[ERROR] OV2640 init failed (code: %d)\r\n", camStatus);
+  }
+
+  printf("\r\n[SYSTEM READY]\r\n\r\n");
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -108,6 +153,58 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+    /* ========================================
+     * Main Scanning Loop
+     * ======================================== */
+
+    /* Step 1: Move gimbal to new position */
+    Servo_SetAngle(SERVO_PAN_CHANNEL, currentPanAngle);
+    Servo_SetAngle(SERVO_TILT_CHANNEL, currentTiltAngle);
+    HAL_Delay(300);  // Wait for servo to stabilize
+
+    /* Step 2: Trigger ultrasonic distance measurement */
+    HCSR04_Trigger();
+
+    /* Wait for measurement to complete (non-blocking check) */
+    uint32_t timeout = 0;
+    while (HCSR04_GetStatus() == HCSR04_MEASURING && timeout < 10000) {
+        timeout++;
+    }
+
+    /* Step 3: Read distance */
+    float distance = 0.0f;
+    if (HCSR04_GetStatus() == HCSR04_READY) {
+        distance = HCSR04_GetDistance();
+    }
+
+    /* Step 4: Print telemetry data */
+    printf("Pan: %.1f deg | Tilt: %.1f deg | Distance: %.1f cm\r\n",
+           currentPanAngle, currentTiltAngle, distance);
+
+    /* Step 5: (Optional) Trigger camera capture
+     * Uncomment the following lines to enable camera capture
+     */
+    /*
+    if (camStatus == OV2640_OK) {
+        memset(imageBuffer, 0, IMAGE_BUFFER_SIZE);
+        if (OV2640_StartCapture(imageBuffer, IMAGE_BUFFER_SIZE) == OV2640_OK) {
+            HAL_Delay(100);  // Wait for capture
+            OV2640_StopCapture();
+            printf("  [Camera] Image captured\r\n");
+        }
+    }
+    */
+
+    /* Step 6: Update pan angle for next scan (0 to 180 degrees) */
+    currentPanAngle += 30.0f;  // Increment by 30 degrees
+    if (currentPanAngle > 180.0f) {
+        currentPanAngle = 0.0f;
+        printf("\r\n--- Scan cycle complete, restarting ---\r\n\r\n");
+    }
+
+    /* Delay before next measurement */
+    HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }
