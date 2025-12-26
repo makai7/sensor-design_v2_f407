@@ -32,7 +32,11 @@
 #include "servo_driver.h"
 #include "hcsr04.h"
 #include "ov2640.h"
+
+#ifdef ENABLE_UNIT_TESTS
 #include "test_suite.h"
+#endif
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -120,8 +124,10 @@ int main(void)
   printf(" Firmware Version: 1.0\r\n");
   printf("========================================\r\n\r\n");
 
+#ifdef ENABLE_UNIT_TESTS
   /* Run Unit Tests First */
   Run_All_Tests();
+#endif
 
   /* 1. Initialize Servo Motors */
   printf("[INIT] Initializing servos...\r\n");

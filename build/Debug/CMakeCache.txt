@@ -232,6 +232,9 @@ CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/ian_arch/coding/sensor-design_v2_f407-1
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Enable embedded unit tests
+ENABLE_UNIT_TESTS:BOOL=ON
+
 //Value Computed by CMake
 V2.2_F407_BINARY_DIR:STATIC=/home/ian_arch/coding/sensor-design_v2_f407-1/build/Debug
 

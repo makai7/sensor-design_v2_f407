@@ -1242,6 +1242,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "ENABLE_UNIT_TESTS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable embedded unit tests"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
+		},
+		{
 			"name" : "V2.2_F407_BINARY_DIR",
 			"properties" : 
 			[

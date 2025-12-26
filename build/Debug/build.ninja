@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_V2.2_F407: phony || cmake_object_order_d
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/main.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/main.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/main.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -61,7 +61,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/main.c.obj: C_COMPILER__V2.2e2_F407_unsc
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/gpio.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/gpio.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/gpio.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -71,7 +71,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/gpio.c.obj: C_COMPILER__V2.2e2_F407_unsc
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/dcmi.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/dcmi.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/dcmi.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -81,7 +81,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/dcmi.c.obj: C_COMPILER__V2.2e2_F407_unsc
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/dma.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/dma.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/dma.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -91,7 +91,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/dma.c.obj: C_COMPILER__V2.2e2_F407_unsca
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/i2c.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/i2c.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/i2c.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -101,7 +101,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/i2c.c.obj: C_COMPILER__V2.2e2_F407_unsca
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/tim.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/tim.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/tim.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -111,7 +111,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/tim.c.obj: C_COMPILER__V2.2e2_F407_unsca
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/usart.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/usart.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/usart.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -121,7 +121,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/usart.c.obj: C_COMPILER__V2.2e2_F407_uns
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/stm32f4xx_it.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/stm32f4xx_it.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/stm32f4xx_it.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -131,7 +131,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/stm32f4xx_it.c.obj: C_COMPILER__V2.2e2_F
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/stm32f4xx_hal_msp.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/stm32f4xx_hal_msp.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/stm32f4xx_hal_msp.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -141,7 +141,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/stm32f4xx_hal_msp.c.obj: C_COMPILER__V2.
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/sysmem.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/sysmem.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/sysmem.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -151,7 +151,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/sysmem.c.obj: C_COMPILER__V2.2e2_F407_un
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/syscalls.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/syscalls.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/syscalls.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -161,7 +161,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/syscalls.c.obj: C_COMPILER__V2.2e2_F407_
 
 build CMakeFiles/V2.2_F407.dir/startup_stm32f407xx.s.obj: ASM_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/startup_stm32f407xx.s || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/startup_stm32f407xx.s.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -171,7 +171,7 @@ build CMakeFiles/V2.2_F407.dir/startup_stm32f407xx.s.obj: ASM_COMPILER__V2.2e2_F
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/servo_driver.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/servo_driver.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/servo_driver.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -181,7 +181,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/servo_driver.c.obj: C_COMPILER__V2.2e2_F
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/hcsr04.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/hcsr04.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/hcsr04.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -191,7 +191,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/hcsr04.c.obj: C_COMPILER__V2.2e2_F407_un
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/ov2640.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/ov2640.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/ov2640.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -201,7 +201,7 @@ build CMakeFiles/V2.2_F407.dir/Core/Src/ov2640.c.obj: C_COMPILER__V2.2e2_F407_un
 
 build CMakeFiles/V2.2_F407.dir/Core/Src/test_suite.c.obj: C_COMPILER__V2.2e2_F407_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/test_suite.c || cmake_object_order_depends_target_V2.2_F407
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles/V2.2_F407.dir/Core/Src/test_suite.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -269,7 +269,7 @@ build cmake_object_order_depends_target_STM32_Drivers: phony || .
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Core/Src/system_stm32f4xx.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -279,7 +279,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -289,7 +289,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -299,7 +299,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -309,7 +309,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -319,7 +319,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -329,7 +329,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -339,7 +339,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -349,7 +349,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -359,7 +359,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -369,7 +369,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -379,7 +379,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -389,7 +389,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -399,7 +399,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -409,7 +409,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -419,7 +419,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -429,7 +429,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -439,7 +439,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -449,7 +449,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -459,7 +459,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include
@@ -469,7 +469,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/ian_arch/coding/sensor-design_v2_f407-1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+  DEFINES = -DDEBUG -DENABLE_UNIT_TESTS=1 -DSTM32F407xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Core/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/ian_arch/coding/sensor-design_v2_f407-1/cmake/stm32cubemx/../../Drivers/CMSIS/Include

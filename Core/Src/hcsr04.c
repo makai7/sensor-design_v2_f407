@@ -23,10 +23,10 @@ static volatile HCSR04_Status_t measureStatus = HCSR04_IDLE;
 static volatile float distance_cm = 0.0f;
 static volatile uint32_t timeoutCounter = 0;
 
-/* Timeout threshold (in TIM3 ticks, 1us per tick)
- * 38ms = 38000 ticks (max range ~6.5m)
+/* Timeout threshold (software timeout counter, not TIM3 ticks)
+ * ~100ms timeout = 100000 iterations in typical polling loop
  */
-#define HCSR04_TIMEOUT  38000
+#define HCSR04_SW_TIMEOUT  100000UL
 
 /**
  * @brief  Initialize HC-SR04 sensor
@@ -76,7 +76,7 @@ HCSR04_Status_t HCSR04_GetStatus(void)
     /* Check for timeout */
     if (measureStatus == HCSR04_MEASURING) {
         timeoutCounter++;
-        if (timeoutCounter > 100000) { // Timeout after ~100ms
+        if (timeoutCounter > HCSR04_SW_TIMEOUT) {
             measureStatus = HCSR04_TIMEOUT;
             distance_cm = 0.0f;
         }

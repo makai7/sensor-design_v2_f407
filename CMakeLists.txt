@@ -28,6 +28,16 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
+# Option to enable/disable unit tests (enabled by default in Debug)
+option(ENABLE_UNIT_TESTS "Enable embedded unit tests" ON)
+
+if(ENABLE_UNIT_TESTS)
+    message("Unit tests: ENABLED")
+    add_compile_definitions(ENABLE_UNIT_TESTS=1)
+else()
+    message("Unit tests: DISABLED")
+endif()
+
 # Enable CMake support for ASM and C languages
 enable_language(C ASM)
 
@@ -48,8 +58,14 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     Core/Src/servo_driver.c
     Core/Src/hcsr04.c
     Core/Src/ov2640.c
-    Core/Src/test_suite.c
 )
+
+# Conditionally add test suite
+if(ENABLE_UNIT_TESTS)
+    target_sources(${CMAKE_PROJECT_NAME} PRIVATE
+        Core/Src/test_suite.c
+    )
+endif()
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
