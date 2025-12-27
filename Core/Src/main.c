@@ -224,7 +224,7 @@ int main(void)
                 HAL_UART_Transmit(&huart1, &imageBuffer[i], chunkSize, 1000);
             }
 
-            printf("\r\nIMG_END (size: %lu bytes)\r\n", jpegSize);
+            printf("IMG_END (size: %lu bytes)\r\n", jpegSize);
         }
     }
 

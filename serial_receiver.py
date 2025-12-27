@@ -58,47 +58,78 @@ class STM32ImageReceiver:
         try:
             image_data = bytearray()
             receiving_image = False
+            text_buffer = ""
 
             while True:
                 if self.ser.in_waiting > 0:
-                    line = self.ser.readline().decode('utf-8', errors='ignore').strip()
+                    # Read raw bytes
+                    chunk = self.ser.read(self.ser.in_waiting)
 
-                    if line:
-                        # Check for image start marker
-                        if "IMG_START" in line:
-                            print(f"\n[IMAGE] Receiving image #{self.image_count + 1}...")
+                    if receiving_image:
+                        # --- IMAGE MODE: Binary data collection ---
+
+                        # Check if IMG_END marker is in this chunk
+                        if b"IMG_END" in chunk:
+                            # Split: before IMG_END is image data, after is text
+                            parts = chunk.split(b"IMG_END", 1)
+                            image_data += parts[0]
+
+                            # Save the complete image
+                            self.save_image(image_data)
+
+                            # Extract size info from the rest of the line
+                            if len(parts) > 1:
+                                try:
+                                    end_line = parts[1].decode('utf-8', errors='ignore').split('\n')[0]
+                                    print(f"[IMAGE] IMG_END{end_line}")
+                                except:
+                                    print(f"[IMAGE] IMG_END received")
+
+                            # Reset state
                             image_data = bytearray()
-                            receiving_image = True
-
-                        # Check for image end marker
-                        elif "IMG_END" in line:
-                            if receiving_image and len(image_data) > 0:
-                                self.save_image(image_data)
-                                print(f"[IMAGE] {line}")
-                                image_data = bytearray()
                             receiving_image = False
 
-                        # Regular telemetry data
-                        elif not receiving_image:
-                            # Print telemetry with timestamp
-                            timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
-                            print(f"[{timestamp}] {line}")
+                            # Continue processing remaining text if any
+                            if len(parts) > 1 and len(parts[1]) > 0:
+                                text_buffer += parts[1].decode('utf-8', errors='ignore')
+                        else:
+                            # No end marker yet, accumulate all binary data
+                            image_data += chunk
 
-                    # If receiving image, read raw binary data
-                    if receiving_image:
-                        # Read all available binary data
-                        while self.ser.in_waiting > 0:
-                            chunk = self.ser.read(self.ser.in_waiting)
-                            # Filter out text markers if they appear
-                            for byte in chunk:
-                                # Only add non-ASCII or valid JPEG bytes
-                                if byte < 32 or byte > 126 or byte in [0xFF, 0xD8, 0xD9]:
-                                    image_data.append(byte)
+                    else:
+                        # --- TEXT MODE: Line-based processing ---
+
+                        # Decode as text
+                        text_buffer += chunk.decode('utf-8', errors='ignore')
+
+                        # Process complete lines
+                        while '\n' in text_buffer:
+                            line, text_buffer = text_buffer.split('\n', 1)
+                            line = line.strip()
+
+                            if not line:
+                                continue
+
+                            # Check for image start marker
+                            if "IMG_START" in line:
+                                print(f"\n[IMAGE] Receiving image #{self.image_count + 1}...")
+                                image_data = bytearray()
+                                receiving_image = True
+                                # Don't process more text, switch to binary mode
+                                text_buffer = ""
+                                break
+
+                            # Regular telemetry data
+                            else:
+                                timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
+                                print(f"[{timestamp}] {line}")
 
         except KeyboardInterrupt:
             print("\n\n[INFO] Stopped by user")
         except Exception as e:
             print(f"\n[ERROR] {e}")
+            import traceback
+            traceback.print_exc()
         finally:
             if self.ser and self.ser.is_open:
                 self.ser.close()
