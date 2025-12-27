@@ -89,3 +89,10 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 
 # Enable printf float support
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -u _printf_float")
+
+
+# 增加.bin固件格式：
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O binary ${CMAKE_PROJECT_NAME}.elf ${CMAKE_PROJECT_NAME}.bin
+    COMMENT "Generating binary file ${CMAKE_PROJECT_NAME}.bin"
+)
