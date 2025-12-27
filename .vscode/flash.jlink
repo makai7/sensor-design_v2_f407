@@ -1,0 +1,5 @@
+r
+loadfile build/V2.2_F407.bin, 0x08000000
+r
+g
+q

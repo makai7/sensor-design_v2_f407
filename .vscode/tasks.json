@@ -1,0 +1,63 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Firmware",
+            "type": "shell",
+            "command": "./build.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "rm -rf build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Flash with JLink",
+            "type": "shell",
+            "command": "JLinkExe -device STM32F407VE -if SWD -speed 4000 -autoconnect 1 -CommanderScript ${workspaceFolder}/.vscode/flash.jlink",
+            "dependsOn": "Build Firmware",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Open Serial Monitor",
+            "type": "shell",
+            "command": "python3 ${workspaceFolder}/serial_receiver.py /dev/ttyUSB0 115200",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build with Unit Tests",
+            "type": "shell",
+            "command": "rm -rf build && mkdir build && cd build && cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/gcc-arm-none-eabi.cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_UNIT_TESTS=ON .. && make -j$(nproc)",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

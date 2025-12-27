@@ -112,12 +112,19 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 /* USER CODE BEGIN 1 */
 
 /**
- * @brief  Retarget printf to USART1
- * @param  ch: Character to send
- * @param  f: File pointer (not used)
- * @retval Character sent
+ * @brief  Retarget the C library printf function to USART1.
+ * @note   For GCC, printf calls __io_putchar() (via syscalls.c).
+ *         For other compilers, it may call fputc().
  */
-int fputc(int ch, FILE *f)
+#ifdef __GNUC__
+  /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
+     set to 'Yes') calls __io_putchar() */
+  #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#else
+  #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#endif /* __GNUC__ */
+
+PUTCHAR_PROTOTYPE
 {
     HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
     return ch;
@@ -125,10 +132,16 @@ int fputc(int ch, FILE *f)
 
 /**
  * @brief  Retarget scanf to USART1 (optional)
- * @param  f: File pointer (not used)
- * @retval Character received
+ * @note   For GCC, scanf calls __io_getchar() (via syscalls.c).
+ *         For other compilers, it may call fgetc().
  */
-int fgetc(FILE *f)
+#ifdef __GNUC__
+  #define GETCHAR_PROTOTYPE int __io_getchar(void)
+#else
+  #define GETCHAR_PROTOTYPE int fgetc(FILE *f)
+#endif /* __GNUC__ */
+
+GETCHAR_PROTOTYPE
 {
     uint8_t ch;
     HAL_UART_Receive(&huart1, &ch, 1, HAL_MAX_DELAY);

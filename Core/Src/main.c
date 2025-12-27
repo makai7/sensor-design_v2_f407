@@ -172,10 +172,12 @@ int main(void)
     /* Step 2: Trigger ultrasonic distance measurement */
     HCSR04_Trigger();
 
-    /* Wait for measurement to complete (non-blocking check) */
+    /* Wait for measurement to complete (non-blocking check with micro-delays) */
     uint32_t timeout = 0;
     while (HCSR04_GetStatus() == HCSR04_MEASURING && timeout < 10000) {
         timeout++;
+        /* Add small delay to reduce CPU load during polling (10us per iteration) */
+        for (volatile uint32_t i = 0; i < 168; i++);  // ~10us at 168MHz
     }
 
     /* Step 3: Read distance */
@@ -188,19 +190,44 @@ int main(void)
     printf("Pan: %.1f deg | Tilt: %.1f deg | Distance: %.1f cm\r\n",
            currentPanAngle, currentTiltAngle, distance);
 
-    /* Step 5: (Optional) Trigger camera capture
-     * Uncomment the following lines to enable camera capture
-     */
-    
+    /* Step 5: (Optional) Trigger camera capture and transmit image data */
+
     if (camStatus == OV2640_OK) {
         memset(imageBuffer, 0, IMAGE_BUFFER_SIZE);
         if (OV2640_StartCapture(imageBuffer, IMAGE_BUFFER_SIZE) == OV2640_OK) {
-            HAL_Delay(100);  // Wait for capture
+            HAL_Delay(100);  // Wait for capture (TODO: replace with callback)
             OV2640_StopCapture();
+
             printf("  [Camera] Image captured\r\n");
+
+            /* Transmit JPEG image data over UART */
+            printf("IMG_START\r\n");
+
+            /* Find actual JPEG size by looking for JPEG end marker (0xFF 0xD9) */
+            uint32_t jpegSize = 0;
+            for (uint32_t i = 0; i < IMAGE_BUFFER_SIZE - 1; i++) {
+                if (imageBuffer[i] == 0xFF && imageBuffer[i+1] == 0xD9) {
+                    jpegSize = i + 2;  // Include end marker
+                    break;
+                }
+            }
+
+            /* If no end marker found, send entire buffer */
+            if (jpegSize == 0) {
+                jpegSize = IMAGE_BUFFER_SIZE;
+            }
+
+            /* Send image data in chunks for better reliability */
+            #define UART_CHUNK_SIZE 256
+            for (uint32_t i = 0; i < jpegSize; i += UART_CHUNK_SIZE) {
+                uint32_t chunkSize = (jpegSize - i) > UART_CHUNK_SIZE ? UART_CHUNK_SIZE : (jpegSize - i);
+                HAL_UART_Transmit(&huart1, &imageBuffer[i], chunkSize, 1000);
+            }
+
+            printf("\r\nIMG_END (size: %lu bytes)\r\n", jpegSize);
         }
     }
-    
+
 
     /* Step 6: Update pan angle for next scan (0 to 180 degrees) */
     currentPanAngle += 30.0f;  // Increment by 30 degrees
