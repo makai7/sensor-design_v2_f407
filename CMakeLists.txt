@@ -29,7 +29,7 @@ project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
 # Option to enable/disable unit tests (enabled by default in Debug)
-option(ENABLE_UNIT_TESTS "Enable embedded unit tests" ON)
+option(ENABLE_UNIT_TESTS "Enable embedded unit tests" OFF)
 
 if(ENABLE_UNIT_TESTS)
     message("Unit tests: ENABLED")

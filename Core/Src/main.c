@@ -191,7 +191,7 @@ int main(void)
     /* Step 5: (Optional) Trigger camera capture
      * Uncomment the following lines to enable camera capture
      */
-    /*
+    
     if (camStatus == OV2640_OK) {
         memset(imageBuffer, 0, IMAGE_BUFFER_SIZE);
         if (OV2640_StartCapture(imageBuffer, IMAGE_BUFFER_SIZE) == OV2640_OK) {
@@ -200,7 +200,7 @@ int main(void)
             printf("  [Camera] Image captured\r\n");
         }
     }
-    */
+    
 
     /* Step 6: Update pan angle for next scan (0 to 180 degrees) */
     currentPanAngle += 30.0f;  // Increment by 30 degrees
