@@ -36,7 +36,7 @@ rule C_COMPILER__V2.2e2_F407_unscanned_Debug
 
 rule C_EXECUTABLE_LINKER__V2.2e2_F407_Debug
   command = $PRE_LINK && /usr/bin/arm-none-eabi-gcc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
-  description = Linking C executable $TARGET_FILE; Generating binary file V2.2_F407.bin
+  description = Linking C executable $TARGET_FILE; Generating binary file V2.2_F407.bin; 正在生成 HEX 文件...
   restat = $RESTAT
 
 
